@@ -1,0 +1,72 @@
+.Fendian {
+  width: 100%;
+  height: 770px;
+}
+.center {
+  width: 1263px;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  background: url("../../assets/Show/fendian/map.jpg") no-repeat;
+  position: relative;
+}
+.xinxi{
+    width: 500px;
+    height: 616px;
+    position: absolute;
+    right: 0;
+    top: 38px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+.xinxi h4{
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.xinxi ul{
+    width: 460px;
+    height: 460px;
+    padding: 20px;
+}
+.xinxi ul li{
+    width: 460px;
+    height: 20px;
+    margin-bottom: 8px;
+}
+.xinxi ul li span{
+    height: 100%; 
+    display: block;
+    float: left;
+    font-size: 14px;
+}
+.xinxi ul li span:nth-child(1){
+    width: 135px;
+    text-align: right;
+    color: #fafa9c;
+}
+.xinxi ul li span:nth-child(2){
+    width: 300px;
+    text-align: left;
+    margin-left: 25px;
+    color: #fff;
+}
+.but{
+    width: 114px;
+    height: 36px;
+    margin: auto;
+}
+.but a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 36px;
+    color: #fff;
+    text-decoration: honeydew;
+    background-color: #ff6f61;
+}

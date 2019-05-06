@@ -1,65 +1,34 @@
-.box{
-    margin: 0;
-    padding: 0;
+.box {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
-.center{
-    width: 1263px;
-    height: 100%;
-    margin: auto;
+.center {
+  width: 1263px;
+  height: 100%;
+  margin: auto;
 }
-.tel{
-    width: 100%;
-    height: 50px;
-    font-size: 26px;
+.biaoti {
+  width: 100%;
+  height: 192px;
+  position: relative;
+  background-color: #fee9e6;
 }
-.tel span{
-    line-height: 50px;
-    margin-left: 50px;
+.biaoti img {
+  width: 596px;
+  height: 92px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
-.fenlei{
-    width: 100%;
-    height: 142px;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 10;
-    border-top: 3px solid #FF6F61;
+.biaoti2 {
+  width: 100%;
+  height: 75px;
+  padding: 50px 0;
+  background-color: #fee9e6;
 }
-.fenlei ul{
-    width: 100%;
-    height: 142px;
-    padding: 0 50px;
-    box-sizing: border-box;
-}
-.fenlei ul li{
-    width: 117px;
-    height: 100%;
-    font-size: 18px;
-    line-height: 142px;
-    text-align: center;
-    float: left;
-}
-.fenlei ul li:nth-child(5){
-    width: 220px;
-}
-.fenlei ul li:hover {
-    background-color: #FF6F61;
-    color: #fff;
-}
-.fenlei ul li:nth-child(5):hover{
-    background-color: rgba(255, 255, 255, 0);
-}
-.biaoti{
-    width: 100%;
-    height: 192px;
-    position: relative;
-    background-color: #fee9e6;
-}
-.biaoti img{
-    width: 596px;
-    height: 92px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+.biaoti2 img {
+  display: block;
+  margin: auto;
 }

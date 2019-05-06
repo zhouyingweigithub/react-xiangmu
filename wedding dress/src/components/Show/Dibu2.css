@@ -1,0 +1,80 @@
+.Dibu2 {
+  width: 100%;
+  height: 352px;
+}
+.center {
+  width: 1263px;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color: #302d2c;
+}
+a {
+  color: #c6b5a6;
+  text-decoration: ghostwhite;
+}
+.hezi {
+  width: 100%;
+  height: 100%;
+  padding: 60px 80px;
+  box-sizing: border-box;
+  color: #c6b5a6;
+}
+.top {
+  width: 100%;
+  height: 32px;
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+.bottom {
+  font-size: 14px;
+  width: 100%;
+  height: 170px;
+}
+.bottom dl {
+  width: 180px;
+  height: 100%;
+  float: left;
+  margin: 0;
+  margin-right: 20px;
+}
+.bottom dl dd {
+  width: 100%;
+  height: 21px;
+  padding: 7px 0;
+  margin: 10px 0;
+  border-bottom: 1px solid #423e3b;
+}
+.bottom dl dd a {
+  transition: all 0.5s 0s;
+}
+.bottom dl dd:hover a {
+  color: #fff;
+}
+.bottom .brigth {
+  width: 232px;
+  height: 100%;
+  float: right;
+}
+.bottom .brigth a {
+  display: block;
+  width: 100%;
+  height: 67px;
+  text-align: center;
+  line-height: 67px;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background: url(../../assets/Show/dibu/icon-all.png) no-repeat;
+  background-color: #ff6f61;
+  transition: all 0.5s 0s;
+}
+.bottom .brigth a:nth-child(1) {
+  background-position: 20px 5px;
+}
+.bottom .brigth a:nth-child(2) {
+  background-position: 20px -121px;
+}
+.bottom .brigth a:hover {
+  background-color: #fe0000;
+}

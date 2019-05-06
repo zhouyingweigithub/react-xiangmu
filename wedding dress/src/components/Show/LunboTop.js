@@ -28,9 +28,9 @@ class LunboTop extends React.Component {
     this.state.bCheck = true;
   }
 
-  // componentDidMount() {
-  //   this.timerID = setInterval(() => this.pan(), 10000);
-  // }
+  componentDidMount() {
+    this.timerID = setInterval(() => this.pan(), 10000);
+  }
 
   pan() {
     if (this.state.bCheck) {
@@ -69,7 +69,7 @@ class LunboTop extends React.Component {
 
   lunbotuY() {
     //自动轮播 右
-    if (new Date() - this.time > 2000) {
+    if (new Date() - this.time > 1000) {
       var div = document.getElementById("div");
       var but = div.getElementsByTagName("div");
       var ul = document.getElementById("imgs");
@@ -84,12 +84,12 @@ class LunboTop extends React.Component {
       //旧图离场
       var timer = setInterval(function() {
         if (juli >= -liw) {
+          juli -= 12.63;
           li[index2].style.right = juli + "px";
-          juli -= 12.36;
         } else {
           clearInterval(timer);
         }
-      }, 20);
+      }, 10);
 
       //计算下标
       index = ++index > len - 1 ? 0 : index;
@@ -100,12 +100,12 @@ class LunboTop extends React.Component {
       //新图进场
       var timer2 = setInterval(function() {
         if (juli2 >= 0) {
+          juli2 -= 12.63;
           li[index].style.right = juli2 + "px";
-          juli2 -= 12.36;
         } else {
           clearInterval(timer2);
         }
-      }, 20);
+      }, 10);
 
       for (var i = 0; i < len; i++) {
         but[i].style.background = "transparent";
@@ -121,7 +121,7 @@ class LunboTop extends React.Component {
 
   lunbotuZ() {
     //自动轮播 左
-    if (new Date() - this.time > 0) {
+    if (new Date() - this.time > 1000) {
       var div = document.getElementById("div");
       var but = div.getElementsByTagName("div");
       var ul = document.getElementById("imgs");
@@ -135,12 +135,12 @@ class LunboTop extends React.Component {
 
       var timer = setInterval(function() {
         if (juli <= liw) {
+          juli += 12.63;
           li[index2].style.right = juli + "px";
-          juli += 12.36;
         } else {
           clearInterval(timer);
         }
-      }, 20);
+      }, 10);
 
       index = --index < 0 ? len - 1 : index;
 
@@ -148,12 +148,12 @@ class LunboTop extends React.Component {
 
       var timer2 = setInterval(function() {
         if (-juli2 <= 0) {
+          juli2 -= 12.63;
           li[index].style.right = -juli2 + "px";
-          juli2 -= 12.36;
         } else {
           clearInterval(timer2);
         }
-      }, 20);
+      }, 10);
 
       for (var i = 0; i < len; i++) {
         but[i].style.background = "transparent";
@@ -166,7 +166,7 @@ class LunboTop extends React.Component {
 
   //点击图标
   lunboZhong(index) {
-    if (new Date() - this.time > 2000) {
+    if (new Date() - this.time > 1000) {
       var div = document.getElementById("div");
       var but = div.getElementsByTagName("div");
       var ul = document.getElementById("imgs");
@@ -177,50 +177,47 @@ class LunboTop extends React.Component {
       var juli2 = liw;
       var index2 = this.state.iNow;
 
-
       if (index < index2) {
         var timer = setInterval(function() {
           if (juli >= -liw) {
+            juli -= 12.63;
             li[index2].style.right = juli + "px";
-            juli -= 12.36;
           } else {
             clearInterval(timer);
           }
-        }, 20);
+        }, 10);
 
         li[index].style.right = liw + "px";
 
         var timer2 = setInterval(function() {
           if (juli2 > 0) {
+            juli2 -= 12.63;
             li[index].style.right = juli2 + "px";
-            juli2 -= 12.36;
           } else {
             clearInterval(timer2);
           }
-        }, 20);
-      } 
-      else if (index == index2) {
-
+        }, 10);
+      } else if (index == index2) {
       } else {
         var timer = setInterval(function() {
           if (juli <= liw) {
+            juli += 12.63;
             li[index2].style.right = juli + "px";
-            juli += 12.36;
           } else {
             clearInterval(timer);
           }
-        }, 20);
+        }, 10);
 
         li[index].style.right = -liw + "px";
 
         var timer2 = setInterval(function() {
           if (-juli2 <= 0) {
+            juli2 -= 12.63;
             li[index].style.right = -juli2 + "px";
-            juli2 -= 12.36;
           } else {
             clearInterval(timer2);
           }
-        }, 20);
+        }, 10);
       }
       for (var i = 0; i < len; i++) {
         but[i].style.background = "transparent";
@@ -241,11 +238,11 @@ class LunboTop extends React.Component {
           className={css.center}
         >
           <LunboImg />
-          <div id="div" className={css.div}  onClick={this.buts} >
-            <div/>
-            <div/>
-            <div/>
-            <div/>
+          <div id="div" className={css.div} onClick={this.buts}>
+            <div />
+            <div />
+            <div />
+            <div />
           </div>
           <span onClick={this.zuo} className={css.zuo}>
             <img src={houtui} />

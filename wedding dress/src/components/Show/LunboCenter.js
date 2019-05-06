@@ -21,7 +21,6 @@ import img7s from "./../../assets/Show/center/9S07_s.jpg";
 import img8s from "./../../assets/Show/center/9S08_s.jpg";
 import img9s from "./../../assets/Show/center/9S09_s.jpg";
 
-
 class LunboCenter extends React.Component {
   constructor(props) {
     super(props);
@@ -29,106 +28,106 @@ class LunboCenter extends React.Component {
     this.buts = this.buts.bind(this);
     this.xiaoqianjin = this.xiaoqianjin.bind(this);
     this.xiaohoutui = this.xiaohoutui.bind(this);
-    this.changdu=0;
-    this.index=0;
-    this.index2=0;
-    this.isok=true;
+    this.changdu = 0;
+    this.index = 0;
+    this.index2 = 0;
+    this.isok = true;
   }
 
-  xiaoqianjin(){ //小图前进
-    if(this.changdu>-1227){
-        this.changdu= this.changdu-1227;
-    }else{
-        this.changdu=-2454;
+  xiaoqianjin() {
+    //小图前进
+    if (this.changdu > -1227) {
+      this.changdu = this.changdu - 1227;
+    } else {
+      this.changdu = -2454;
     }
-    var div=document.getElementById("div2");
-    var xiaoul=div.getElementsByTagName("ul")[0];
-    xiaoul.style.left=this.changdu+"px";
-}
+    var div = document.getElementById("div2");
+    var xiaoul = div.getElementsByTagName("ul")[0];
+    xiaoul.style.left = this.changdu + "px";
+  }
 
-xiaohoutui(){ //小图后退
-    if(this.changdu<0){
-        this.changdu= this.changdu+1227;
-    }else{
-        this.changdu=0;
+  xiaohoutui() {
+    //小图后退
+    if (this.changdu < 0) {
+      this.changdu = this.changdu + 1227;
+    } else {
+      this.changdu = 0;
     }
-    var div=document.getElementById("div2");
-    var xiaoul=div.getElementsByTagName("ul")[0];
-    xiaoul.style.left=this.changdu+"px";
-}
+    var div = document.getElementById("div2");
+    var xiaoul = div.getElementsByTagName("ul")[0];
+    xiaoul.style.left = this.changdu + "px";
+  }
 
-buts(){//点击小图
-    var div=document.getElementById("div2");
-    var xiaoul=div.getElementsByTagName("ul")[0];
-    var li=xiaoul.getElementsByTagName("li");
-    var datu=document.getElementById("datu");
-    var img=datu.getElementsByTagName("li");
+  buts() {
+    //点击小图
+    var div = document.getElementById("div2");
+    var xiaoul = div.getElementsByTagName("ul")[0];
+    var li = xiaoul.getElementsByTagName("li");
+    var datu = document.getElementById("datu");
+    var img = datu.getElementsByTagName("li");
     var liw = img[0].offsetWidth;
     var juli = 0;
     var juli2 = liw;
 
-    for(let i=0;i<li.length;i++){ //获取下标 循环里面写点击事件
-        li[i].onclick = () => {  
-          this.index=i;   
-        }
+    for (let i = 0; i < li.length; i++) {
+      //获取下标 循环里面写点击事件
+      li[i].onclick = () => {
+        this.index = i;
+      };
     }
-    for(var i=0;i<li.length;i++){
-      li[i].className="";
+    for (var i = 0; i < li.length; i++) {
+      li[i].className = "";
     }
 
     var index = this.index;
     var index2 = this.index2;
 
-    li[index].className="LunboCenter__gaoliang___5wB7M";
+    li[index].className = "LunboCenter__gaoliang___5wB7M";
 
-      if(index<index2){
-        var timer = setInterval(function() {
-          if (juli >= -liw) {
-            img[index2].style.right = juli + "px";
-            juli -= 12.36;
-          } else {
-            clearInterval(timer);
-          }
-        }, 20);
-  
-        img[index].style.right = liw + "px";
-  
-          var timer2 = setInterval(function() {
-            if (juli2 > 0) {
-              img[index].style.right = juli2 + "px";
-              juli2 -= 12.36;
-            } else {
-              clearInterval(timer2);
-            }
-          }, 20);
-  
-      }else if (index == index2) {
+    if (index < index2) {
+      var timer = setInterval(function() {
+        if (juli >= -liw) {
+          juli -= 12.63;
+          img[index2].style.right = juli + "px";
+        } else {
+          clearInterval(timer);
+        }
+      }, 20);
 
-      }else{
-        var timer = setInterval(function() {
-          if (juli <= liw) {
-            img[index2].style.right = juli + "px";
-            juli += 12.36;
-          } else {
-            clearInterval(timer);
-          }
-        }, 20);
-  
-        img[index].style.right = -liw + "px";
-  
-        var timer2 = setInterval(function() {
-          if (-juli2 <= 0) {
-            img[index].style.right = -juli2 + "px";
-            juli2 -= 12.36;
-          } else {
-            clearInterval(timer2);
-          }
-        }, 20);
-      }
-      this.index2=this.index;
+      img[index].style.right = liw + "px";
+
+      var timer2 = setInterval(function() {
+        if (juli2 > 0) {
+          juli2 -= 12.63;
+          img[index].style.right = juli2 + "px";
+        } else {
+          clearInterval(timer2);
+        }
+      }, 20);
+    } else if (index == index2) {
+    } else {
+      var timer = setInterval(function() {
+        if (juli <= liw) {
+          juli += 12.63;
+          img[index2].style.right = juli + "px";
+        } else {
+          clearInterval(timer);
+        }
+      }, 20);
+
+      img[index].style.right = -liw + "px";
+
+      var timer2 = setInterval(function() {
+        if (-juli2 <= 0) {
+          juli2 -= 12.63;
+          img[index].style.right = -juli2 + "px";
+        } else {
+          clearInterval(timer2);
+        }
+      }, 20);
     }
-
-
+    this.index2 = this.index;
+  }
 
   render() {
     return (
@@ -172,9 +171,11 @@ buts(){//点击小图
           </div>
 
           <div id="div2" className={css.div}>
-            <div onClick={this.xiaohoutui} className={css.xiaozuo}><img src={houtui}/></div>
+            <div onClick={this.xiaohoutui} className={css.xiaozuo}>
+              <img src={houtui} />
+            </div>
             <div>
-              <ul  onClick={this.buts}>
+              <ul onClick={this.buts}>
                 <li className={css.gaoliang}>
                   <img src={img1s} />
                   <p>风尚高定 | CUSTOM</p>
@@ -213,7 +214,9 @@ buts(){//点击小图
                 </li>
               </ul>
             </div>
-            <div onClick={this.xiaoqianjin} className={css.xiaoyou}><img src={qianjin}/></div>
+            <div onClick={this.xiaoqianjin} className={css.xiaoyou}>
+              <img src={qianjin} />
+            </div>
           </div>
         </div>
       </div>

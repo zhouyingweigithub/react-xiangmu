@@ -1,95 +1,95 @@
-.zhujian{
-    width: 100%;
-    height: 1000px;
+.zhujian {
+  width: 100%;
+  height: 1000px;
 }
-.center{
-    width: 1263px;
-    height: 100%;
-    margin: auto;
+.center {
+  width: 1263px;
+  height: 100%;
+  margin: auto;
 }
-.top{
-    width: 100%;
-    height: 700px;
-    overflow: hidden;
-    position: relative;
+.top {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  position: relative;
 }
-.ul{
-    width: 1263px;
-    height: 700px;
-    transition: all 2s 0s;
+.ul {
+  width: 1263px;
+  height: 700px;
+  transition: all 2s 0s;
 }
-.ul li{
-    width: 100%;
-    height: 700px;
-    float: left;
-    position: absolute;
-    top: 0;
-    right: -1263px;
+.ul li {
+  width: 100%;
+  height: 700px;
+  float: left;
+  position: absolute;
+  top: 0;
+  right: -1263px;
 }
-.ul li:nth-child(1){
-    right: 0;
+.ul li:nth-child(1) {
+  right: 0;
 }
-.div{
-    width: 100%;
-    height: 300px;
-    margin-top: 5px;
-    position: relative;
-    padding: 0 18px;
-    box-sizing: border-box;
+.div {
+  width: 100%;
+  height: 300px;
+  margin-top: 5px;
+  position: relative;
+  padding: 0 18px;
+  box-sizing: border-box;
 }
-.div div:nth-child(2){
-    width: 100%;
-    height: 226px;
-    position: relative;
-    overflow: hidden;
+.div div:nth-child(2) {
+  width: 100%;
+  height: 226px;
+  position: relative;
+  overflow: hidden;
 }
-.div div ul{
-    width: 3123px;
-    height: 226px;
-    position: absolute;
-    transition: all 2s 0s;
+.div div ul {
+  width: 3123px;
+  height: 226px;
+  position: absolute;
+  transition: all 2s 0s;
 }
-.div div ul li{
-    width: 340px;
-    height: 222px;
-    float: left;
-    margin-right: 5px;
-    border-bottom: 4px solid #fff;
+.div div ul li {
+  width: 340px;
+  height: 222px;
+  float: left;
+  margin-right: 5px;
+  border-bottom: 4px solid #fff;
 }
-.div div ul li p{
-    text-align: center;
-    padding: 5px 0;
-    font-size: 18px;
-    display: block;
+.div div ul li p {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 18px;
+  display: block;
 }
-.div div ul .gaoliang{
-    border-bottom: 4px solid rgb(255, 105, 105);
+.div div ul .gaoliang {
+  border-bottom: 4px solid rgb(255, 105, 105);
 }
-.div div ul li:hover{
-    border-bottom: 4px solid rgb(255, 211, 211);
+.div div ul li:hover {
+  border-bottom: 4px solid rgb(255, 211, 211);
 }
-.div div ul li img{
-    width: 100%;
-    height: 175px;
+.div div ul li img {
+  width: 100%;
+  height: 175px;
 }
-.div .xiaozuo{
-    width: 18px;
-    height: 175px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 10;
+.div .xiaozuo {
+  width: 18px;
+  height: 175px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
 }
-.div .xiaoyou{
-    width: 18px;
-    height: 175px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 10;
+.div .xiaoyou {
+  width: 18px;
+  height: 175px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
-.div div>img{
-    width: 100%;
-    height: 50%;
-    margin-top: 43.75px;
+.div div > img {
+  width: 100%;
+  height: 50%;
+  margin-top: 43.75px;
 }
