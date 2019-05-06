@@ -1,0 +1,87 @@
+.zhujian {
+  width: 100%;
+  height: 440px;
+  background-color: #fee9e6;
+}
+.center {
+  width: 1263px;
+  height: 100%;
+  margin: auto;
+}
+.hezi {
+  width: 1137px;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.ul {
+  width: 1932px;
+  height: 100%;
+}
+.ul li {
+  width: 483px;
+  height: 280px;
+  float: left;
+  transition: all 1s 0s;
+  background: yellowgreen;
+  position: absolute;
+  top: 7%;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+}
+.ul li img {
+  width: 100%;
+  height: 100%;
+}
+.ul li:nth-child(1) {
+  left: -483px;
+}
+.ul li:nth-child(2) {
+  left: -237px;
+}
+.ul li:nth-child(3) {
+  width: 650px;
+  height: 370px;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
+}
+.ul li:nth-child(4) {
+  left: 893px;
+}
+.ul li:nth-child(5) {
+  left: 1400px;
+}
+.zuo,
+.you {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 15;
+  opacity: 0.4;
+  background-size: 100% 100%;
+  transition: all 1s 0s;
+}
+.zuo {
+  left: 50px;
+  background: url(../../assets/Show/bottom/houtui.png) no-repeat center;
+  background-size: 70% 70%;
+}
+.you {
+  right: 50px;
+  background: url(../../assets/Show/bottom/qianjin.png) no-repeat center;
+  background-size: 70% 70%;
+}
+.hezi:hover .zuo {
+  opacity: 0.8;
+  background-color: #000;
+}
+.hezi:hover .you {
+  opacity: 0.8;
+  background-color: #000;
+}

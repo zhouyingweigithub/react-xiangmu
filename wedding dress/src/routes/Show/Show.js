@@ -3,6 +3,8 @@ import { connect } from "dva";
 import css from "./Show.css";
 import LunboTop from "./../../components/Show/LunboTop.js";
 import LunboCenter from "./../../components/Show/LunboCenter.js";
+import LunboBottom from "./../../components/Show/LunboBottom.js";
+import Kepian from "./../../components/Show/Kepian.js";
 function IndexPage() {
   return (
     <div className={css.box}>
@@ -35,6 +37,11 @@ function IndexPage() {
         </div>
       </div>
       <LunboCenter/>
+      <div className={css.biaoti2}>
+      <img src={require("./../../assets/Show/tit02.png")}/>
+      </div>
+      <LunboBottom/>
+      <Kepian/>
     </div>
   );
 }

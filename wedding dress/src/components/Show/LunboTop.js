@@ -28,9 +28,9 @@ class LunboTop extends React.Component {
     this.state.bCheck = true;
   }
 
-  // componentDidMount() {
-  //   this.timerID = setInterval(() => this.pan(), 10000);
-  // }
+  componentDidMount() {
+    this.timerID = setInterval(() => this.pan(), 10000);
+  }
 
   pan() {
     if (this.state.bCheck) {
