@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "dva";
-import LunboTop from "./../components/Show/LunboTop.js";
+import LunboTop from "./../components/commonality/LunboTop.js";
 import LunboCenter from "./../components/Show/LunboCenter.js";
 import LunboBottom from "./../components/Show/LunboBottom.js";
 import Fenlei from "./../components/commonality/Fenlei.js";
@@ -13,10 +13,23 @@ import Dibu1 from "./../components/commonality/Dibu1.js";
 import Dibu2 from "./../components/commonality/Dibu2.js";
 import Dibu3 from "./../components/commonality/Dibu3.js";
 
-function Show() {
+
+class Show extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state={
+      img:{
+        img1:require("./../assets/Show/top/1-1Z4261Z5430-L.jpg"),
+        img2:require("./../assets/Show/top/1-1Z320143P40-L.jpg"),
+        img3:require("./../assets/Show/top/1-1Z3201005040-L.jpg"),
+        img4:require("./../assets/Show/top/1-1Z402111052292.jpg"),
+      }
+    }
+  }
+  render() {
   return (
     <div>
-      <LunboTop />
+      <LunboTop parms={this.state.img} />
       <Fenlei />
       <Biaoti1 />
       <LunboCenter />
@@ -29,9 +42,8 @@ function Show() {
       <Dibu2 />
       <Dibu3 />
     </div>
-  );
+  )}
 }
 
-Show.propTypes = {};
 
 export default connect()(Show);

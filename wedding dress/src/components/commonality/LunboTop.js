@@ -2,10 +2,6 @@ import React from "react";
 import css from "./LunboTop.css";
 import qianjin from "./../../assets/Show/top/right.png";
 import houtui from "./../../assets/Show/top/left.png";
-import img1 from "./../../assets/Show/top/1-1Z4261Z5430-L.jpg";
-import img2 from "./../../assets/Show/top/1-1Z320143P40-L.jpg";
-import img3 from "./../../assets/Show/top/1-1Z3201005040-L.jpg";
-import img4 from "./../../assets/Show/top/1-1Z402111052292.jpg";
 
 class LunboTop extends React.Component {
   constructor(props) {
@@ -15,9 +11,10 @@ class LunboTop extends React.Component {
     this.handleMouseout = this.handleMouseout.bind(this);
     this.buts = this.buts.bind(this);
     this.zuo = this.zuo.bind(this);
-    this.you = this.you.bind(this);//监听子组件变化
+    this.you = this.you.bind(this); //监听子组件变化
     this.time = 0;
     this.index = 0;
+    this.ul = React.createRef();//根据ref获取节点
   }
 
   handleMouseover() {
@@ -28,8 +25,16 @@ class LunboTop extends React.Component {
     this.state.bCheck = true;
   }
 
-  componentDidMount() {
+  componentDidMount() {//生命周期，挂载后
+
     this.timerID = setInterval(() => this.pan(), 10000);
+
+    //根据图片数量渲染小按钮
+    var length=this.ul.current.getElementsByTagName("li").length;//获取LI的长度
+    var div=document.getElementById("div");
+    for(var i=0;i<length;i++){
+      div.innerHTML+="<div></div>";
+    }
   }
 
   pan() {
@@ -237,12 +242,27 @@ class LunboTop extends React.Component {
           onMouseOut={this.handleMouseout}
           className={css.center}
         >
-          <LunboImg />
+          <ul ref={this.ul} id="imgs" className={css.ul}>
+            <li className={css.lis}>
+            {/* 组件通信 */}
+              <img src={this.props.parms.img1} />
+            </li>
+            <li>
+              <img src={this.props.parms.img2} />
+            </li>
+            <li>
+              <img src={this.props.parms.img3} />
+            </li>
+            <li>
+              <img src={this.props.parms.img4} />
+            </li>
+          </ul>
+
           <div id="div" className={css.div} onClick={this.buts}>
+            {/* <div />
             <div />
             <div />
-            <div />
-            <div />
+            <div /> */}
           </div>
           <span onClick={this.zuo} className={css.zuo}>
             <img src={houtui} />
@@ -254,25 +274,6 @@ class LunboTop extends React.Component {
       </div>
     );
   }
-}
-
-function LunboImg() {
-  return (
-    <ul id="imgs" className={css.ul}>
-      <li className={css.lis}>
-        <img src={img1} />
-      </li>
-      <li>
-        <img src={img2} />
-      </li>
-      <li>
-        <img src={img3} />
-      </li>
-      <li>
-        <img src={img4} />
-      </li>
-    </ul>
-  );
 }
 
 export default LunboTop;
