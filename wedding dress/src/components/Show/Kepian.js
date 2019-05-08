@@ -37,7 +37,7 @@ class Kepian extends React.Component {
           clearTimeout(time3);
         }
       }, 22);
-    }, 13000);
+    }, 6000);
   }
 
   render() {

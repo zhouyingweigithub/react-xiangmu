@@ -70,7 +70,7 @@ class LunboCenter extends React.Component {
     var juli2 = liw;
 
     for (let i = 0; i < li.length; i++) {
-      //获取下标 循环里面写点击事件
+      //获取下标 
       li[i].onclick = () => {
         this.index = i;
       };

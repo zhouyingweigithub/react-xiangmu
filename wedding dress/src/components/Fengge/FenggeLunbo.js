@@ -1,13 +1,14 @@
 import React from "react";
-import css from "./LunboTop.css";
+import css from "./FenggeLunbo.css";
 import qianjin from "./../../assets/Show/top/right.png";
 import houtui from "./../../assets/Show/top/left.png";
-import img1 from "./../../assets/Show/top/1-1Z4261Z5430-L.jpg";
-import img2 from "./../../assets/Show/top/1-1Z320143P40-L.jpg";
-import img3 from "./../../assets/Show/top/1-1Z3201005040-L.jpg";
-import img4 from "./../../assets/Show/top/1-1Z402111052292.jpg";
+import img1 from "./../../assets/Fengge/P01.jpg";
+import img2 from "./../../assets/Fengge/P02.jpg";
+import img3 from "./../../assets/Fengge/P03.jpg";
+import img4 from "./../../assets/Fengge/P04.jpg";
+import img5 from "./../../assets/Fengge/P05.jpg";
 
-class LunboTop extends React.Component {
+class FenggeLunbo extends React.Component {
   constructor(props) {
     super(props);
     this.state = { iNow: 0, bCheck: true };
@@ -15,7 +16,7 @@ class LunboTop extends React.Component {
     this.handleMouseout = this.handleMouseout.bind(this);
     this.buts = this.buts.bind(this);
     this.zuo = this.zuo.bind(this);
-    this.you = this.you.bind(this);//监听子组件变化
+    this.you = this.you.bind(this);
     this.time = 0;
     this.index = 0;
   }
@@ -243,6 +244,7 @@ class LunboTop extends React.Component {
             <div />
             <div />
             <div />
+            <div />
           </div>
           <span onClick={this.zuo} className={css.zuo}>
             <img src={houtui} />
@@ -271,8 +273,11 @@ function LunboImg() {
       <li>
         <img src={img4} />
       </li>
+      <li>
+        <img src={img5} />
+      </li>
     </ul>
   );
 }
 
-export default LunboTop;
+export default FenggeLunbo;

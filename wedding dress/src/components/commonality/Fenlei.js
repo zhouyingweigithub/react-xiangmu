@@ -6,6 +6,23 @@ class Fenlei extends React.Component {
     super(props);
   }
 
+  fenlei() {
+    var fenlei = document.getElementById("fenlei");
+    var li = fenlei.getElementsByTagName("li");
+    li[0].onclick = function() {
+      window.location.hash = "0";
+    };
+    li[1].onclick = function() {
+      window.location.hash = "1";
+    };
+    li[2].onclick = function() {
+      window.location.hash = "2";
+    };
+    li[3].onclick = function() {
+      window.location.hash = "3";
+    };
+  }
+
   render() {
     return (
       <div className={css.daohang}>
@@ -16,7 +33,7 @@ class Fenlei extends React.Component {
         </div>
         <div className={css.fenlei}>
           <div className={css.center}>
-            <ul>
+            <ul id="fenlei" onClick={this.fenlei.bind(this)}>
               <li>首页</li>
               <li>风格鉴品</li>
               <li>客片赏析</li>
